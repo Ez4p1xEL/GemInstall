@@ -1,0 +1,50 @@
+language: en
+prefix: GemInstall
+message-prefix: '&7[&bGemInstall&7]'
+commands:
+  top: '&7&m                                    '
+  help: '&f/%prefix% &bView help.'
+  gui: '&f/%prefix% gui &bOpen gem installing menu.'
+  reload: '&f/%prefix% reload &bReload the configuration.'
+  bottom: '&7&m                                    '
+
+reload-success: '%prefix% &aConfiguration reloaded successful!'
+no-perm: '%prefix% &cYou have no permission to do that!'
+must-be-a-player: '%prefix% &cYou must be a player to do that!'
+
+failure: '%prefix% &cGem installed failed!'
+success: '%prefix% &aGem installed successfully!'
+gem-lost: '%prefix% &cYou have to put the gem for installing!'
+item-lost: '%prefix% &cYou have to put a weapon or a armor for installing!'
+all-lost: '%prefix% &cYou have to put the materials for installing!'
+money-not-enough: '%prefix% &cYou do not have enough money to do that! It needs &e%amount% &ctotal!'
+gem-wrong: '%prefix% &cThe gem you put is not matched!'
+item-wrong: '%prefix% &cYou should put a weapon or a armor rather than this!'
+gui-opened: '%prefix% &aYou opened the GUI'
+one-gem-only: '%prefix% &cYou should not put more than one gem!'
+shift-click: '%prefix% &cDo not use shift click. You should use left click only instead.'
+
+# The below messages are for the gem installing GUI.
+# USE §, not &!!!
+
+gui:
+  title: 'Gem Installing'
+  item-slot:
+    display: '§aPut your weapon/armor here'
+    lore:
+      - ''
+      - '§7Move your item on this slot!'
+  gem-slot:
+    display: '§aPut your gem here'
+    lore:
+      - ''
+      - '§7Move your gem on this slot!'
+  start-slot:
+    display: '§aStart to install'
+    lore:
+      - ''
+      - '§7Click to start installing!'
+  neutral-slot:
+    display: '§9NOTHING HERE'
+    lore:
+      - ''

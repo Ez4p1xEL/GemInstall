@@ -1,0 +1,49 @@
+language: zh_CN
+prefix: GemInstall
+message-prefix: '&7[&bGemInstall&7]'
+commands:
+  top: '&7&m                                    '
+  help: '&f/%prefix% &b查看帮助'
+  gui: '&f/%prefix% gui &b打开镶嵌菜单'
+  reload: '&f/%prefix% reload &b重载配置文件'
+  bottom: '&7&m                                    '
+
+reload-success: '%prefix% &a配置文件重载成功!'
+no-perm: '%prefix% &c你没有权限这么做!'
+must-be-a-player: '%prefix% &c你必须是名玩家!'
+
+failure: '%prefix% &c失败!'
+success: '%prefix% &a镶嵌成功!'
+gem-lost: '%prefix% &c你必须放入宝石才可镶嵌!'
+item-lost: '%prefix% &c你必须放入装备才可镶嵌!'
+all-lost: '%prefix% &c你必须放入物品才可镶嵌!'
+money-not-enough: '%prefix% &c你没有足够的金钱! 总共需要 &e%amount% &c!'
+gem-wrong: '%prefix% &c放入的宝石不对应!'
+item-wrong: '%prefix% &c你应该放入装备而不是这玩意!'
+gui-opened: '%prefix% &a你开启了镶嵌菜单'
+one-gem-only: '%prefix% &c你不能放入超过1个的宝石!'
+shift-click: '%prefix% &c不要使用Shift点击, 直接点击放入!'
+
+# 以下消息为GUI菜单, 请务必使用§颜色符号而不是&
+
+gui:
+  title: '宝石镶嵌'
+  item-slot:
+    display: '§a把你的装备放在这'
+    lore:
+      - ''
+      - '§7移动你的装备到栏位中!'
+  gem-slot:
+    display: '§a把你的宝石放在这'
+    lore:
+      - ''
+      - '§7移动你的宝石到栏位中!'
+  start-slot:
+    display: '§a开始镶嵌'
+    lore:
+      - ''
+      - '§7点击开始镶嵌!'
+  neutral-slot:
+    display: '§9什么都没有'
+    lore:
+      - ''

@@ -1,0 +1,31 @@
+# § YES
+# & NO
+power1:
+  lore: '§7一级攻击宝石'
+  attribute: '§7物理攻击: +30'
+  hole:
+    type: attack
+    lore: '§c<攻击宝石>孔位'
+  vault:
+    enable: true
+    cost: 1000.0
+
+power2:
+  lore: '§7二级攻击宝石'
+  attribute: '§7物理攻击: +50'
+  hole:
+    type: attack
+    lore: '§c<攻击宝石>孔位'
+  vault:
+    enable: true
+    cost: 1000.0
+
+health:
+  lore: '§7一级生命宝石'
+  attribute: '§7生命上限: +30'
+  hole:
+    type: heal
+    lore: '§c<生命宝石>孔位'
+  vault:
+    enable: false
+    cost: 1000.0

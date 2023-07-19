@@ -3,8 +3,11 @@ package p1xel.minecraft.bukkit;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-import p1xel.minecraft.bukkit.Utils.Config;
+import p1xel.minecraft.bukkit.Command.Cmd;
+import p1xel.minecraft.bukkit.Listeners.GuiListener;
+import p1xel.minecraft.bukkit.Utils.GemUtils;
 import p1xel.minecraft.bukkit.Utils.LocaleManager;
+import p1xel.minecraft.bukkit.bStats.Metrics;
 
 public class GemInstall extends JavaPlugin {
 
@@ -20,11 +23,18 @@ public class GemInstall extends JavaPlugin {
         instance = this;
         saveDefaultConfig();
         LocaleManager.createFile();
+        GemUtils.createFile();
 
         if (!setupEconomy() ) {
             this.getLogger().info("没有找到Vault!");
             this.getLogger().info("Vault is not found!");
         }
+
+        this.getServer().getPluginManager().registerEvents(new GuiListener(), this);
+        this.getServer().getPluginCommand("GemInstall").setExecutor(new Cmd());
+
+        int pluginId = 19137;
+        new Metrics(this, pluginId);
 
         this.getLogger().info("插件加载成功");
         this.getLogger().info("版本: " + this.getDescription().getVersion());

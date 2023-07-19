@@ -1,4 +1,4 @@
-package p1xel.minecraft.bukkit;
+package p1xel.minecraft.bukkit.Utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -15,9 +15,44 @@ public class GuiManager {
     public Inventory createGUI(Player p) {
         Inventory inv = Bukkit.createInventory(p, 36, LocaleManager.getMessage("gui.title"));
 
-        inv.setItem(11, getSlotItem("item-slot"));
+        inv.setItem(0, getSlotItem("item-slot"));
+        inv.setItem(1, getSlotItem("item-slot"));
+        inv.setItem(2, getSlotItem("item-slot"));
+        inv.setItem(3, getSlotItem("item-slot"));
+        inv.setItem(9, getSlotItem("item-slot"));
+        inv.setItem(10, getSlotItem("item-slot"));
+        inv.setItem(12, getSlotItem("item-slot"));
+        inv.setItem(18, getSlotItem("item-slot"));
+        inv.setItem(19, getSlotItem("item-slot"));
+        inv.setItem(20, getSlotItem("item-slot"));
+        inv.setItem(21, getSlotItem("item-slot"));
+
+        inv.setItem(5, getSlotItem("gem-slot"));
+        inv.setItem(6, getSlotItem("gem-slot"));
+        inv.setItem(7, getSlotItem("gem-slot"));
+        inv.setItem(8, getSlotItem("gem-slot"));
         inv.setItem(14, getSlotItem("gem-slot"));
+        inv.setItem(16, getSlotItem("gem-slot"));
+        inv.setItem(17, getSlotItem("gem-slot"));
+        inv.setItem(23, getSlotItem("gem-slot"));
+        inv.setItem(24, getSlotItem("gem-slot"));
+        inv.setItem(25, getSlotItem("gem-slot"));
+        inv.setItem(26, getSlotItem("gem-slot"));
         inv.setItem(31, getSlotItem("start-slot"));
+
+        inv.setItem(4, getSlotItem("neutral-slot"));
+        inv.setItem(13, getSlotItem("neutral-slot"));
+        inv.setItem(22, getSlotItem("neutral-slot"));
+        inv.setItem(27, getSlotItem("neutral-slot"));
+        inv.setItem(28, getSlotItem("neutral-slot"));
+        inv.setItem(29, getSlotItem("neutral-slot"));
+        inv.setItem(30, getSlotItem("neutral-slot"));
+        inv.setItem(32, getSlotItem("neutral-slot"));
+        inv.setItem(33, getSlotItem("neutral-slot"));
+        inv.setItem(34, getSlotItem("neutral-slot"));
+        inv.setItem(35, getSlotItem("neutral-slot"));
+
+
 
         return inv;
     }
@@ -46,11 +81,22 @@ public class GuiManager {
         }
 
         if (name.equalsIgnoreCase("start-slot")) {
-            ItemStack item = new ItemStack(Material.RED_STAINED_GLASS_PANE, 1) ;
+            ItemStack item = new ItemStack(Material.ANVIL, 1) ;
             ItemMeta meta = item.getItemMeta();
             if (meta != null) {
                 meta.setDisplayName(LocaleManager.getMessage("gui.start-slot.display"));
                 meta.setLore(LocaleManager.get().getStringList("gui.start-slot.lore"));
+            }
+            item.setItemMeta(meta);
+            return item;
+        }
+
+        if (name.equalsIgnoreCase("neutral-slot")) {
+            ItemStack item = new ItemStack(Material.BLUE_STAINED_GLASS_PANE, 1) ;
+            ItemMeta meta = item.getItemMeta();
+            if (meta != null) {
+                meta.setDisplayName(LocaleManager.getMessage("gui.neutral-slot.display"));
+                meta.setLore(LocaleManager.get().getStringList("gui.neutral-slot.lore"));
             }
             item.setItemMeta(meta);
             return item;
